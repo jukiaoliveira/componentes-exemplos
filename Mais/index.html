@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogos e Diversão: Relógio, Calculadora, Contador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jogos e Diversão</h1>
+
+  <!-- 1. Relógio Digital -->
+  <section>
+    <h2>Relógio Digital</h2>
+    <div class="clock" id="digitalClock">00:00:00</div>
+  </section>
+
+  <!-- 2. Calculadora Estilizada -->
+  <section>
+    <h2>Calculadora Estilizada</h2>
+    <div class="calculator" id="calculator">
+      <input type="text" class="calc-display" id="calcDisplay" value="0" readonly>
+      <div class="calc-buttons">
+        <button data-action="C">C</button>
+        <button data-action="/">÷</button>
+        <button data-action="*">×</button>
+        <button data-action="←">←</button>
+        <button data-action="7">7</button>
+        <button data-action="8">8</button>
+        <button data-action="9">9</button>
+        <button data-action="-">−</button>
+        <button data-action="4">4</button>
+        <button data-action="5">5</button>
+        <button data-action="6">6</button>
+        <button data-action="+">+</button>
+        <button data-action="1">1</button>
+        <button data-action="2">2</button>
+        <button data-action="3">3</button>
+        <button data-action="=" class="equal-btn" rowspan="2">=</button>
+        <button data-action="0" class="zero-btn">0</button>
+        <button data-action=".">.</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Contador de Cliques com Animação -->
+  <section>
+    <h2>Contador de Cliques</h2>
+    <div class="counter-container">
+      <button id="counterBtn" class="counter-btn">Clique!</button>
+      <div id="counterValue" class="counter-value">0</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
