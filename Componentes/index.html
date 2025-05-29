@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Componentes Customizados: Modal, Barra de Progresso e Toast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Exemplos de Componentes Customizados</h1>
+
+  <!-- 1. BOTÃO PARA ABRIR MODAL -->
+  <button id="openModalBtn" class="btn">Abrir Modal Animado</button>
+
+  <!-- 2. MODAL ANIMADO -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <h2>Olá!</h2>
+      <p>Este é um modal animado, estilizado e acessível. Clique fora ou no botão abaixo para fechar.</p>
+      <button id="closeModalBtn" class="btn btn-close">Fechar Modal</button>
+    </div>
+  </div>
+
+  <hr style="margin:40px 0;">
+
+  <!-- 3. BARRA DE PROGRESSO DE LEITURA -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div style="height: 700px;">
+    <p>Role esta página para ver a barra de leitura no topo. (Simula uma leitura longa!)</p>
+  </div>
+
+  <hr style="margin:40px 0;">
+
+  <!-- 4. BOTÃO PARA NOTIFICAÇÃO/TOAST -->
+  <button id="showToastBtn" class="btn">Mostrar Toast de Notificação</button>
+
+  <!-- 5. TOAST -->
+  <div class="toast" id="toast">
+    <span>✅ Operação realizada com sucesso!</span>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

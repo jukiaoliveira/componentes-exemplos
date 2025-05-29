@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7fa;
+  color: #222;
+  padding: 40px 0;
+  margin: 0;
+  min-height: 150vh;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px #6c63ff22;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #4b47be;
+}
+.btn-close {
+  background: #f44336;
+}
+.btn-close:hover {
+  background: #ad2424;
+}
+
+/* 1. MODAL ANIMADO */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal {
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 6px 24px #0002;
+  max-width: 380px;
+  width: 92vw;
+  padding: 35px 30px 30px 30px;
+  text-align: center;
+  transform: translateY(-60px) scale(0.96);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(.43,1.5,.56,1.03);
+}
+.modal-backdrop.active .modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* 2. BARRA DE PROGRESSO DE LEITURA */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: #e0e0e0;
+  z-index: 500;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c00, #6c63ff 80%);
+  width: 0%;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.18s;
+}
+
+/* 3. TOAST (NOTIFICAÇÃO) */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: #222;
+  color: #fff;
+  padding: 18px 38px;
+  border-radius: 10px;
+  font-size: 17px;
+  box-shadow: 0 2px 12px #2224;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(.43,1.5,.56,1.03);
+  z-index: 999;
+}
+.toast.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
